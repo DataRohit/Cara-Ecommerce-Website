@@ -5,7 +5,7 @@ import "../styles/globals.css";
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
-      <NextNProgress color="#088178" stopDelayMs={200} height={4} />
+      <NextNProgress color="#6275D9" stopDelayMs={200} height={4} />
 
       <Head>
         <title>Cara Ecommerce</title>

@@ -6,11 +6,11 @@ import { useRouter } from "next/router";
 // Writing the custom reusable styles
 const navbar_li_style = "py-0 px-[20px] relative";
 const navbar_li_a_style =
-  "text-base font-bold text-[#1A1A1A] transtion duration-[0.3s] ease hover:text-[#088178]";
+  "text-base font-bold text-[#1A1A1A] transtion duration-[0.3s] ease hover:text-[#6275D9]";
 const navbar_li_a_active_style =
-  "text-[#088178] after:content-[''] after:w-[30%] after:h-[4px] after:rounded-sm after:bg-[#088178] after:absolute after:bottom-[-4px] after:left-[20px]";
+  "text-[#6275D9] after:content-[''] after:w-[30%] after:h-[4px] after:rounded-sm after:bg-[#6275D9] after:absolute after:bottom-[-4px] after:left-[20px]";
 const navbar_li_a_hover_active_style =
-  "hover:after:content-[''] hover:after:w-[30%] hover:after:h-[4px] hover:after:rounded-sm hover:after:bg-[#088178] hover:after:absolute hover:after:bottom-[-4px] hover:after:left-[20px] hover:transtion hover:duration-[0.3s] hover:ease hover:text-[#088178]";
+  "hover:after:content-[''] hover:after:w-[30%] hover:after:h-[4px] hover:after:rounded-sm hover:after:bg-[#6275D9] hover:after:absolute hover:after:bottom-[-4px] hover:after:left-[20px] hover:transtion hover:duration-[0.3s] hover:ease hover:text-[#6275D9]";
 
 // Header Component
 const Header = () => {
@@ -44,7 +44,7 @@ const Header = () => {
   return (
     <section
       id="header"
-      className="flex items-center justify-between py-[20px] px-[80px] bg-[#E3E6F3] shadow-header"
+      className="flex items-center justify-between py-[20px] px-[80px] bg-[#E3E6F3] shadow-header z-50 sticky top-0 left-0"
     >
       <a href="#">
         <img src="/logo.png" alt="Cara" className="logo" />
