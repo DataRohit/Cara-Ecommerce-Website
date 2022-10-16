@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { StarIcon } from "@heroicons/react/solid";
 import { ShoppingCartIcon } from "@heroicons/react/outline";
 
@@ -26,12 +27,11 @@ const Product1 = () => {
             {price}
           </h4>
         </div>
-        <a
-          href="#"
-          className="absolute w-10 h-10 leading-[40px] rounded-[50px] bg-[#E8F6EA] font-medium text-[#088178] border-[1px] border-[#CCE7D0] bottom-[20px] right-[10px] flex items-center justify-center"
-        >
-          <ShoppingCartIcon className="w-6 h-6" />
-        </a>
+        <Link href="#">
+          <a className="absolute w-10 h-10 leading-[40px] rounded-[50px] bg-[#E8F6EA] font-medium text-[#088178] border-[1px] border-[#CCE7D0] bottom-[20px] right-[10px] flex items-center justify-center">
+            <ShoppingCartIcon className="w-6 h-6" />
+          </a>
+        </Link>
       </div>
     );
   };
@@ -42,15 +42,15 @@ const Product1 = () => {
       <p className="font-medium text-lg">Summer Collection New Modern Design</p>
 
       <div className="pro-container flex justify-center lg:justify-between pt-[20px] flex-wrap">
-        {product({ imgPath: "products/f1.jpg" })}
-        {product({ imgPath: "products/f2.jpg" })}
-        {product({ imgPath: "products/f3.jpg" })}
-        {product({ imgPath: "products/f4.jpg" })}
+        {product({ imgPath: "/products/f1.jpg" })}
+        {product({ imgPath: "/products/f2.jpg" })}
+        {product({ imgPath: "/products/f3.jpg" })}
+        {product({ imgPath: "/products/f4.jpg" })}
 
-        {product({ imgPath: "products/f5.jpg" })}
-        {product({ imgPath: "products/f6.jpg" })}
-        {product({ imgPath: "products/f7.jpg" })}
-        {product({ imgPath: "products/f8.jpg" })}
+        {product({ imgPath: "/products/f5.jpg" })}
+        {product({ imgPath: "/products/f6.jpg" })}
+        {product({ imgPath: "/products/f7.jpg" })}
+        {product({ imgPath: "/products/f8.jpg" })}
       </div>
     </section>
   );

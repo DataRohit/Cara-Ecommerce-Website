@@ -1,5 +1,4 @@
 import React from "react";
-
 const Features = () => {
   const feature = ({ imgPath, content, bg_color }) => {
     return (

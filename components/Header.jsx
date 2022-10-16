@@ -3,6 +3,7 @@ import { ShoppingBagIcon } from "@heroicons/react/outline";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 // Writing the custom reusable styles
@@ -31,14 +32,15 @@ const Header = () => {
   const navbar_li_component = ({ route = "", content = "Home" }) => {
     return (
       <li className={navbar_li_style}>
-        <a
-          href={`/${route}`}
-          className={`${navbar_li_a_style} ${navbar_li_a_hover_active_style} ${
-            pageRoute === route && navbar_li_a_active_style
-          }`}
-        >
-          {content}
-        </a>
+        <Link href={`/${route}`}>
+          <a
+            className={`${navbar_li_a_style} ${navbar_li_a_hover_active_style} ${
+              pageRoute === route && navbar_li_a_active_style
+            }`}
+          >
+            {content}
+          </a>
+        </Link>
       </li>
     );
   };
@@ -51,9 +53,11 @@ const Header = () => {
       id="header"
       className="flex items-center justify-between py-[10px] md:py-[20px] px-[30px] md:px-[80px] bg-[#E3E6F3] shadow-header z-50 sticky top-0 left-0"
     >
-      <a href="#">
-        <img src="/logo.png" alt="Cara" className="logo" />
-      </a>
+      <Link href="#">
+        <a>
+          <img src="/logo.png" alt="Cara" className="logo" />
+        </a>
+      </Link>
       <div>
         <ul
           id="navbar"
@@ -82,14 +86,15 @@ const Header = () => {
         id="mobile"
         className="flex items-center justify-center lg:hidden text-2xl"
       >
-        <a
-          href={`/cart`}
-          className={`${navbar_li_a_style} ${navbar_li_a_hover_active_style} ${
-            pageRoute === "cart" && navbar_li_a_active_style
-          }`}
-        >
-          <ShoppingBagIcon className="h-6 w-6 mb-1 mr-3" />
-        </a>
+        <Link href={`/cart`}>
+          <a
+            className={`${navbar_li_a_style} ${navbar_li_a_hover_active_style} ${
+              pageRoute === "cart" && navbar_li_a_active_style
+            }`}
+          >
+            <ShoppingBagIcon className="h-6 w-6 mb-1 mr-3" />
+          </a>
+        </Link>
         <GiHamburgerMenu
           id="bar"
           onClick={() => setNavbarState(!navbarState)}

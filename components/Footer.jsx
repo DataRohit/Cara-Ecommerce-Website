@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+
 import {
   FaFacebookF,
   FaTwitter,
@@ -25,7 +27,6 @@ const Footer = () => {
         <p>
           <span>Hours:</span> 10:00 - 18:00, Mon - Sat
         </p>
-
         <div className="follow mt-[20px] ">
           <h4>Follow us</h4>
           <div className="icon flex items-center justify-start text-[#465B52] pr-[4px] cursor-pointer">
@@ -40,20 +41,20 @@ const Footer = () => {
 
       <div className="col">
         <h4>About</h4>
-        <a href="/about">About Us</a>
-        <a href="/cart">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Condition</a>
-        <a href="/contact">Contact Us</a>
+        <Link href="/about">About Us</Link>
+        <Link href="/cart">Delivery Information</Link>
+        <Link href="#">Privacy Policy</Link>
+        <Link href="#">Terms & Condition</Link>
+        <Link href="/contact">Contact Us</Link>
       </div>
 
       <div className="col">
         <h4>My Account</h4>
-        <a href="#">Sign In</a>
-        <a href="/cart">View Cart</a>
-        <a href="/cart">My Wishlist</a>
-        <a href="#">Tract My Order</a>
-        <a href="#">Help</a>
+        <Link href="#">Sign In</Link>
+        <Link href="/cart">View Cart</Link>
+        <Link href="/cart">My Wishlist</Link>
+        <Link href="#">Tract My Order</Link>
+        <Link href="#">Help</Link>
       </div>
 
       <div className="col install ">
@@ -63,12 +64,14 @@ const Footer = () => {
           <img
             src="/pay/app.jpg"
             alt=""
-            className="border-2 border-solid border-[#088178] rounded-md mr-2 mb-2"
-          />
+            className="border-2 border-solid
+          border-[#088178] rounded-md mr-2 mb-2"
+          />{" "}
           <img
             src="/pay/play.jpg"
             alt=""
-            className="border-2 border-solid border-[#088178] rounded-md mr-2"
+            className="border-2 border-solid
+          border-[#088178] rounded-md mr-2"
           />
         </p>
         <p>Secured Payment Gateways</p>

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Banner2 = () => {
   const banner = ({ bg, h4, h2, span, a }) => {
@@ -15,12 +16,11 @@ const Banner2 = () => {
         <span className="text-white text-sm md:text-base font-semibold pb-[15px]">
           {span}
         </span>
-        <a
-          href="/shop"
-          className="text-sm font-semibold py-[11px] px-[18px] text-white bg-transparent cursor-pointer border-2 border-white border-solid outline-none transition delay-[0.1s] ease-out hover:bg-[#088178] hover:border-2 hover:border-solid hover:border-[#088178]"
-        >
-          {a}
-        </a>
+        <Link href="/shop">
+          <a className="text-sm font-semibold py-[11px] px-[18px] text-white bg-transparent cursor-pointer border-2 border-white border-solid outline-none transition delay-[0.1s] ease-out hover:bg-[#088178] hover:border-2 hover:border-solid hover:border-[#088178]">
+            {a}
+          </a>
+        </Link>
       </div>
     );
   };

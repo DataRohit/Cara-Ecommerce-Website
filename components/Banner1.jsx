@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Banner1 = () => {
@@ -11,12 +12,11 @@ const Banner1 = () => {
         Up to <span className="text-[#FFA41C]">70% off</span> - All t-Shirts &
         Accessories
       </h2>
-      <a
-        href="/shop"
-        className="text-sm font-semibold py-[15px] px-[30px] text-black bg-white rounded cursor-pointer border-0 outline-0 transition delay-[0.1s] ease-out hover:bg-[#088178] hover:text-white"
-      >
-        Explore More
-      </a>
+      <Link href="/shop">
+        <a className="text-sm font-semibold py-[15px] px-[30px] text-black bg-white rounded cursor-pointer border-0 outline-0 transition delay-[0.1s] ease-out hover:bg-[#088178] hover:text-white">
+          Explore More
+        </a>
+      </Link>
     </section>
   );
 };
