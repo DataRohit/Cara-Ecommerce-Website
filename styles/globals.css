@@ -38,4 +38,33 @@
   .section-m1 {
     @apply mx-0 my-[40px];
   }
+
+  #banner2 .banner-box:hover a {
+    @apply bg-[#088178] border-2 border-solid border-[#088178];
+  }
+
+  #footer .col {
+    @apply flex flex-col items-start mb-5;
+  }
+
+  #footer h4 {
+    @apply text-base pb-5 font-semibold;
+  }
+
+  #footer p {
+    @apply text-[13px] mb-[8px] font-medium;
+  }
+
+  footer a {
+    @apply text-[13px] text-[#222] mb-[10px];
+  }
+
+  footer .follow .icon svg {
+    @apply w-[20px] h-[20px] mr-[10px];
+  }
+
+  footer .follow .icon svg:hover,
+  footer a:hover {
+    @apply text-[#088178];
+  }
 }
