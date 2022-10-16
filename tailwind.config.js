@@ -16,6 +16,8 @@ module.exports = {
         "home-banner-4": "url('/banner/b7.jpg')",
         "home-banner-5": "url('/banner/b4.jpg')",
         "home-banner-6": "url('/banner/b18.jpg')",
+        "shop-page-header": "url('/banner/b1.jpg')",
+        "blog-page-header": "url('/banner/b19.jpg')",
       },
 
       fontFamily: {

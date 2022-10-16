@@ -3,7 +3,7 @@ import Link from "next/link";
 import { StarIcon } from "@heroicons/react/solid";
 import { ShoppingCartIcon } from "@heroicons/react/outline";
 
-const Product2 = () => {
+const Product2 = ({ shop = false }) => {
   const product = ({
     imgPath = "products/f1.jpg",
     brand = "adidas",
@@ -27,7 +27,7 @@ const Product2 = () => {
             {price}
           </h4>
         </div>
-        <Link href="#">
+        <Link href="/cart">
           <a className="absolute w-10 h-10 leading-[40px] rounded-[50px] bg-[#E8F6EA] font-medium text-[#088178] border-[1px] border-[#CCE7D0] bottom-[20px] right-[10px] flex items-center justify-center">
             <ShoppingCartIcon className="w-6 h-6" />
           </a>
@@ -37,9 +37,18 @@ const Product2 = () => {
   };
 
   return (
-    <section id="product2" className="p-5 md:section-p1 text-center">
-      <h2 className="font-bold">New Arrivals</h2>
-      <p className="font-medium text-lg">Summer Collection New Modern Design</p>
+    <section
+      id="product2"
+      className={`text-center ${
+        shop ? "py-0 px-5 md:px-[80px] md:py-0" : "p-5 md:section-p1"
+      }`}
+    >
+      <h2 className={`font-bold ${!shop ? "block" : "hidden"}`}>
+        New Arrivals
+      </h2>
+      <p className={`font-medium text-lg ${!shop ? "block" : "hidden"}`}>
+        Summer Collection New Modern Design
+      </p>
 
       <div className="pro-container flex justify-center lg:justify-between pt-[20px] flex-wrap">
         {product({ imgPath: "/products/n1.jpg" })}
