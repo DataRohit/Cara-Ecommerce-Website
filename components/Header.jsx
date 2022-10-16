@@ -72,7 +72,6 @@ const Header = () => {
           {navbar_li_component({ route: "", content: "Home" })}
           {navbar_li_component({ route: "shop", content: "Shop" })}
           {navbar_li_component({ route: "blog", content: "Blog" })}
-          {navbar_li_component({ route: "about", content: "About" })}
           {navbar_li_component({ route: "contact", content: "Contact" })}
           {navbar_li_component({
             route: "cart",

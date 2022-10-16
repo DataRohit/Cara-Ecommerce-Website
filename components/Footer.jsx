@@ -41,7 +41,6 @@ const Footer = () => {
 
       <div className="col">
         <h4>About</h4>
-        <Link href="/about">About Us</Link>
         <Link href="/cart">Delivery Information</Link>
         <Link href="#">Privacy Policy</Link>
         <Link href="#">Terms & Condition</Link>
