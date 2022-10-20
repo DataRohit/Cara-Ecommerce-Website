@@ -1,15 +1,29 @@
 import React from "react";
-import Link from "next/link";
 import { StarIcon } from "@heroicons/react/solid";
 import { ShoppingCartIcon } from "@heroicons/react/outline";
+import { useDispatch } from "react-redux";
+import { addToBasket } from "../slices/basketSlice";
 
 const Product1 = ({ shop = false }) => {
+  const dispatch = useDispatch();
+
   const product = ({
     imgPath = "products/f1.jpg",
     brand = "adidas",
     productTitle = "Cartoon Astronaut T-Shirts",
-    price = "₹3499",
+    price = 3499,
   }) => {
+    const addItemToBasket = () => {
+      const product = {
+        imgPath,
+        brand,
+        productTitle,
+        price,
+      };
+
+      dispatch(addToBasket(product));
+    };
+
     return (
       <div className="pro w-full md:w-[23%] min-w-[250px] py-[10px] px-[12px] border-[1px] border-[#CCE7D0] rounded-3xl cursor-pointer shadow-product-sm m-[15px] lg:my-[15px] lg:mx-0 hover:shadow-product-lg transition delay-[0.2s] ease relative">
         <img src={imgPath} alt="product" className="w-full rounded-[20px]" />
@@ -24,14 +38,16 @@ const Product1 = ({ shop = false }) => {
             ))}
           </div>
           <h4 className="pt-[7px] text-lg font-semibold text-[#088178]">
-            {price}
+            ₹{price}
           </h4>
         </div>
-        <Link href="/cart">
-          <a className="absolute w-10 h-10 leading-[40px] rounded-[50px] bg-[#E8F6EA] font-medium text-[#088178] border-[1px] border-[#CCE7D0] bottom-[20px] right-[10px] flex items-center justify-center">
-            <ShoppingCartIcon className="w-6 h-6" />
-          </a>
-        </Link>
+
+        <div
+          className="absolute w-10 h-10 leading-[40px] rounded-[50px] bg-[#E8F6EA] font-medium text-[#088178] border-[1px] border-[#CCE7D0] bottom-[20px] right-[10px] flex items-center justify-center"
+          onClick={addItemToBasket}
+        >
+          <ShoppingCartIcon className="w-6 h-6" />
+        </div>
       </div>
     );
   };

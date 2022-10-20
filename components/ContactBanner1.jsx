@@ -18,7 +18,7 @@ const ContactBanner1 = () => {
         />
       </h2>
       <p className="text-base md:text-xl font-medium text-white">
-        Want to get in touch with us? We'd love to hear from you.
+        Want to get in touch with us? We would love to hear from you.
       </p>
     </section>
   );
