@@ -1,11 +1,15 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ContactBanner1 from "../components/ContactBanner1";
+import ContactDetails from "../components/ContactDetails";
 
 const Contact = (props) => {
   return (
     <>
       <Header />
+      <ContactBanner1 />
+      <ContactDetails />
       <Footer />
     </>
   );

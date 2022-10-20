@@ -59,7 +59,7 @@ const Footer = () => {
       <div className="col install ">
         <h4>Install App</h4>
         <p>From App Store or Google Play</p>
-        <p className="row flex items-center flex-wrap">
+        <p className="flex items-center flex-wrap">
           <img
             src="/pay/app.jpg"
             alt=""
@@ -70,7 +70,7 @@ const Footer = () => {
             src="/pay/play.jpg"
             alt=""
             className="border-2 border-solid
-          border-[#088178] rounded-md mr-2"
+          border-[#088178] rounded-md mr-2 mb-2"
           />
         </p>
         <p>Secured Payment Gateways</p>
