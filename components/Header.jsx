@@ -7,6 +7,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { useSelector } from "react-redux";
+import { selectItems } from "../slices/basketSlice";
 
 // Writing the custom reusable styles
 const navbar_li_style = "py-0 px-[20px] relative mb-[25px] lg:mb-0 list-none";
@@ -26,6 +28,8 @@ const navbar_li_a_account_false_style =
 // Header Component
 const Header = () => {
   const { data: session } = useSession();
+
+  const items = useSelector(selectItems);
 
   // Initializing the nextjs router
   const router = useRouter();
@@ -119,7 +123,12 @@ const Header = () => {
           {navbar_li_component({
             route: "cart",
             content: (
-              <ShoppingBagIcon className="h-6 w-6 mb-1 hidden lg:block" />
+              <>
+                <ShoppingBagIcon className="h-6 w-6 mb-1 hidden lg:block" />
+                <span className="absolute -top-2 right-1 text-center rounded-full text-black text-sm bg-[#95a7ff] h-4 w-4">
+                  {items?.length}
+                </span>
+              </>
             ),
           })}
         </ul>
@@ -141,11 +150,14 @@ const Header = () => {
         )}
         <Link href={`/cart`}>
           <a
-            className={`${navbar_li_a_style} ${navbar_li_a_hover_active_style} ${
+            className={`relative ${navbar_li_a_style} ${navbar_li_a_hover_active_style} ${
               pageRoute === "cart" && navbar_li_a_active_style
             }`}
           >
             <ShoppingBagIcon className="h-6 w-6 mb-1 mr-3" />
+            <span className="absolute -top-2 right-1 text-center rounded-full text-black text-sm bg-[#95a7ff] h-4 w-4">
+              0
+            </span>
           </a>
         </Link>
 
