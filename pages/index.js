@@ -9,6 +9,8 @@ import Banner3 from "../components/Banner3";
 import Footer from "../components/Footer";
 
 const Home = (props) => {
+  console.log(process.env.GOOGLE_ID);
+  console.log(process.env.GOOGLE_SECRET);
   return (
     <>
       <Header />
