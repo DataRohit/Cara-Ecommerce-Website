@@ -15,7 +15,7 @@ const navbar_li_style = "py-0 px-[20px] relative mb-[25px] lg:mb-0 list-none";
 const navbar_li_a_style =
   "text-base font-bold text-[#1A1A1A] transtion duration-[0.3s] ease hover:text-[#6275D9] text-center";
 const navbar_li_a_active_style =
-  "text-[#6275D9] after:content-[''] after:w-[30%] after:h-[4px] after:rounded-sm after:bg-[#6275D9] after:absolute after:bottom-[-4px] after:left-[20px]";
+  "text-[#6275D9] after:content-[''] after:w-[30%] after:h-[4px] after:rounded-sm after:bg-[#6275D9] after:absolute after:bottom-[-4px] after:left-[20px] after:bg-transparent lg:bg-inherit";
 const navbar_li_a_hover_active_style =
   "hover:after:content-[''] hover:after:w-[30%] hover:after:h-[4px] hover:after:rounded-sm hover:after:bg-[#6275D9] hover:after:absolute hover:after:bottom-[-4px] hover:after:left-[20px] hover:transtion hover:duration-[0.3s] hover:ease hover:text-[#6275D9]";
 
@@ -86,7 +86,7 @@ const Header = () => {
         <ul
           id="navbar"
           className={`flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-center fixed lg:static top-0  h-screen lg:h-auto w-[300px] lg:w-auto bg-[#E3E6F3] lg:bg-transparent shadow-header2 lg:shadow-transparent pt-[80px] lg:pt-0 pl-[10px] lg:pl-0 transition-[0.3s] duration-300 ${
-            navbarState ? "right-0" : "-right-[300px]"
+            navbarState ? "right-0 z-50" : "-right-[300px] z-50"
           }`}
         >
           <FaTimes
@@ -125,7 +125,7 @@ const Header = () => {
             content: (
               <>
                 <ShoppingBagIcon className="h-6 w-6 mb-1 hidden lg:block" />
-                <span className="absolute -top-2 right-1 text-center rounded-full text-black text-sm bg-[#95a7ff] h-4 w-4">
+                <span className="absolute -top-2 right-1 text-center rounded-full text-black text-sm h-4 w-4 hidden lg:block bg-[#95a7ff]">
                   {items?.length}
                 </span>
               </>
@@ -149,11 +149,7 @@ const Header = () => {
           />
         )}
         <Link href={`/cart`}>
-          <a
-            className={`relative ${navbar_li_a_style} ${navbar_li_a_hover_active_style} ${
-              pageRoute === "cart" && navbar_li_a_active_style
-            }`}
-          >
+          <a className={`relative ${navbar_li_a_style}`}>
             <ShoppingBagIcon className="h-6 w-6 mb-1 mr-3" />
             <span className="absolute -top-2 right-1 text-center rounded-full text-black text-sm bg-[#95a7ff] h-4 w-4">
               0

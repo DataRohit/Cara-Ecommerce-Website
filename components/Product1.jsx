@@ -12,6 +12,7 @@ const Product1 = ({ shop = false }) => {
     brand = "adidas",
     productTitle = "Cartoon Astronaut T-Shirts",
     price = 3499,
+    id,
   }) => {
     const addItemToBasket = () => {
       const product = {
@@ -19,6 +20,7 @@ const Product1 = ({ shop = false }) => {
         brand,
         productTitle,
         price,
+        id,
       };
 
       dispatch(addToBasket(product));
@@ -67,15 +69,15 @@ const Product1 = ({ shop = false }) => {
       </p>
 
       <div className="pro-container flex justify-center lg:justify-between pt-[20px] flex-wrap">
-        {product({ imgPath: "/products/f1.jpg" })}
-        {product({ imgPath: "/products/f2.jpg" })}
-        {product({ imgPath: "/products/f3.jpg" })}
-        {product({ imgPath: "/products/f4.jpg" })}
+        {product({ imgPath: "/products/f1.jpg", id: 1 })}
+        {product({ imgPath: "/products/f2.jpg", id: 2 })}
+        {product({ imgPath: "/products/f3.jpg", id: 3 })}
+        {product({ imgPath: "/products/f4.jpg", id: 4 })}
 
-        {product({ imgPath: "/products/f5.jpg" })}
-        {product({ imgPath: "/products/f6.jpg" })}
-        {product({ imgPath: "/products/f7.jpg" })}
-        {product({ imgPath: "/products/f8.jpg" })}
+        {product({ imgPath: "/products/f5.jpg", id: 5 })}
+        {product({ imgPath: "/products/f6.jpg", id: 6 })}
+        {product({ imgPath: "/products/f7.jpg", id: 7 })}
+        {product({ imgPath: "/products/f8.jpg", id: 8 })}
       </div>
     </section>
   );

@@ -1,15 +1,18 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useSelector } from "react-redux";
-import { selectItems } from "../slices/basketSlice";
+
+import CartBanner1 from "../components/CartBanner1";
+import CartSection from "../components/CartSection";
+import CartTotal from "../components/CartTotal";
 
 const Cart = (props) => {
-  const items = useSelector(selectItems);
-
   return (
     <>
       <Header />
+      <CartBanner1 />
+      <CartSection />
+      <CartTotal />
       <Footer />
     </>
   );

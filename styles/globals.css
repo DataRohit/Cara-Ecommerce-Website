@@ -67,4 +67,8 @@
   footer a:hover {
     @apply text-[#088178];
   }
+
+  #cart-total table td {
+    @apply w-1/2 border-[1px] border-solid border-[#E2E9E1] p-3 text-sm;
+  }
 }
