@@ -43,12 +43,12 @@ const Product2 = ({ shop = false }) => {
             ₹{price}
           </h4>
         </div>
-        <div
+        <button
           className="absolute w-10 h-10 leading-[40px] rounded-[50px] bg-[#E8F6EA] font-medium text-[#088178] border-[1px] border-[#CCE7D0] bottom-[20px] right-[10px] flex items-center justify-center"
           onClick={addItemToBasket}
         >
           <ShoppingCartIcon className="w-6 h-6" />
-        </div>
+        </button>
       </div>
     );
   };
@@ -68,15 +68,39 @@ const Product2 = ({ shop = false }) => {
       </p>
 
       <div className="pro-container flex justify-center lg:justify-between pt-[20px] flex-wrap">
-        {product({ imgPath: "/products/n1.jpg", id: 9 })}
-        {product({ imgPath: "/products/n2.jpg", id: 10 })}
-        {product({ imgPath: "/products/n3.jpg", id: 11 })}
-        {product({ imgPath: "/products/n4.jpg", id: 12 })}
+        {product({
+          imgPath: "https://i.postimg.cc/nrrZsnDk/n1.jpg",
+          id: 9,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/j5gYYBFJ/n2.jpg",
+          id: 10,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/jjTbHHfC/n3.jpg",
+          id: 11,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/yNTzvDhj/n4.jpg",
+          id: 12,
+        })}
 
-        {product({ imgPath: "/products/n5.jpg", id: 13 })}
-        {product({ imgPath: "/products/n6.jpg", id: 14 })}
-        {product({ imgPath: "/products/n7.jpg", id: 15 })}
-        {product({ imgPath: "/products/n8.jpg", id: 16 })}
+        {product({
+          imgPath: "https://i.postimg.cc/Pxrncd2j/n5.jpg",
+          id: 13,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/HnrDY3qv/n6.jpg",
+          id: 14,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/6qFsynwW/n7.jpg",
+          id: 15,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/440RLkcD/n8.jpg",
+          id: 16,
+        })}
       </div>
     </section>
   );

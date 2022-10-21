@@ -97,6 +97,7 @@ const Header = () => {
           {navbar_li_component({ route: "shop", content: "Shop" })}
           {navbar_li_component({ route: "blog", content: "Blog" })}
           {navbar_li_component({ route: "contact", content: "Contact" })}
+          {navbar_li_component({ route: "orders", content: "Orders" })}
 
           {session
             ? navbar_li_component({
@@ -152,7 +153,7 @@ const Header = () => {
           <a className={`relative ${navbar_li_a_style}`}>
             <ShoppingBagIcon className="h-6 w-6 mb-1 mr-3" />
             <span className="absolute -top-2 right-1 text-center rounded-full text-black text-sm bg-[#95a7ff] h-4 w-4">
-              0
+              {items?.length}
             </span>
           </a>
         </Link>

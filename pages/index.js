@@ -7,6 +7,7 @@ import Product2 from "../components/Product2";
 import Banner2 from "../components/Banner2";
 import Banner3 from "../components/Banner3";
 import Footer from "../components/Footer";
+import { getSession } from "next-auth/react";
 
 const Home = (props) => {
   return (
@@ -26,8 +27,11 @@ const Home = (props) => {
 
 export default Home;
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context);
   return {
-    props: {},
+    props: {
+      session,
+    },
   };
 };

@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ContactBanner1 from "../components/ContactBanner1";
 import ContactDetails from "../components/ContactDetails";
+import { getSession } from "next-auth/react";
 
 const Contact = (props) => {
   return (
@@ -17,8 +18,11 @@ const Contact = (props) => {
 
 export default Contact;
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context);
   return {
-    props: {},
+    props: {
+      session,
+    },
   };
 };

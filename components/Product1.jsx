@@ -44,12 +44,12 @@ const Product1 = ({ shop = false }) => {
           </h4>
         </div>
 
-        <div
+        <button
           className="absolute w-10 h-10 leading-[40px] rounded-[50px] bg-[#E8F6EA] font-medium text-[#088178] border-[1px] border-[#CCE7D0] bottom-[20px] right-[10px] flex items-center justify-center"
           onClick={addItemToBasket}
         >
           <ShoppingCartIcon className="w-6 h-6" />
-        </div>
+        </button>
       </div>
     );
   };
@@ -69,15 +69,39 @@ const Product1 = ({ shop = false }) => {
       </p>
 
       <div className="pro-container flex justify-center lg:justify-between pt-[20px] flex-wrap">
-        {product({ imgPath: "/products/f1.jpg", id: 1 })}
-        {product({ imgPath: "/products/f2.jpg", id: 2 })}
-        {product({ imgPath: "/products/f3.jpg", id: 3 })}
-        {product({ imgPath: "/products/f4.jpg", id: 4 })}
+        {product({
+          imgPath: "https://i.postimg.cc/nz0pcXCr/f1.jpg",
+          id: 1,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/MKhxT2K7/f2.jpg",
+          id: 2,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/v82bJxJS/f3.jpg",
+          id: 3,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/9fPcK82G/f4.jpg",
+          id: 4,
+        })}
 
-        {product({ imgPath: "/products/f5.jpg", id: 5 })}
-        {product({ imgPath: "/products/f6.jpg", id: 6 })}
-        {product({ imgPath: "/products/f7.jpg", id: 7 })}
-        {product({ imgPath: "/products/f8.jpg", id: 8 })}
+        {product({
+          imgPath: "https://i.postimg.cc/DZ27TrfR/f5.jpg",
+          id: 5,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/5NHbbN19/f6.jpg",
+          id: 6,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/43RJ8CDf/f7.jpg",
+          id: 7,
+        })}
+        {product({
+          imgPath: "https://i.postimg.cc/hvYnTN8q/f8.jpg",
+          id: 8,
+        })}
       </div>
     </section>
   );
