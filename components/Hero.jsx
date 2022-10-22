@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Typewriter from "typewriter-effect";
 
@@ -30,9 +31,11 @@ const Hero = () => {
       <p className="text-base md:text-xl font-medium">
         Save more with coupon codes & up to 80% off!
       </p>
-      <button className="bg-hero-btn-bg bg-transparent text-[#6275D9] border-0 text-base pt-[12px] pr-[80px] pb-[14px] pl-[65px] bg-no-repeat cursor-pointer font-bold">
-        Shop Now
-      </button>
+      <Link href="/shop">
+        <button className="bg-hero-btn-bg bg-transparent text-[#6275D9] border-0 text-base pt-[12px] pr-[80px] pb-[14px] pl-[65px] bg-no-repeat cursor-pointer font-bold">
+          Shop Now
+        </button>
+      </Link>
     </section>
   );
 };
