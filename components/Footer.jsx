@@ -16,7 +16,11 @@ const Footer = () => {
       className="p-6 md:section-p1 flex flex-wrap justify-between"
     >
       <div className="col">
-        <img src="/logo.png" alt="" className="logo mb-[30px]" />
+        <img
+          src="/cara-logo.jpeg"
+          alt=""
+          className="logo mb-[30px] h-10 rounded-md"
+        />
         <h4>Contact</h4>
         <p>
           <span>Address:</span> 562 Wellington Road, Street 32, San Francisco

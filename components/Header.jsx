@@ -79,7 +79,11 @@ const Header = () => {
     >
       <Link href="/">
         <a>
-          <img src="/logo.png" alt="Cara" className="logo" />
+          <img
+            src="/cara-logo.jpeg"
+            alt="Cara"
+            className="logo h-10 rounded-md"
+          />
         </a>
       </Link>
       <div>
